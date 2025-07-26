@@ -1,0 +1,47 @@
+.navbarWrapper {
+  background-color: transparent !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbarScrolled {
+  background-color: rgba(10, 10, 26, 0.85) !important;
+  backdrop-filter: blur(10px);
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navLink {
+  position: relative; 
+  font-size: 18px;
+  font-weight: 500;
+  color: #4b4b4b !important;
+  margin-left: 15px;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: #ffffff !important;
+}
+
+
+.navLink::before {
+  content: "";
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00aaff; 
+  transition: width 0.3s ease-in-out;
+}
+
+.navLink:hover::before {
+  width: 100%;
+}
