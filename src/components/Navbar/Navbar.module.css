@@ -8,28 +8,30 @@
   backdrop-filter: blur(10px);
 }
 
-
 .logo {
   font-size: 24px;
   font-weight: 700;
-  color: #fff;
+  color: #f3f1f1 !important;
 }
 
 .navLink {
   position: relative; 
   font-size: 18px;
   font-weight: 500;
-  color: #4b4b4b !important;
+  color: #f7f6f6 !important;
   margin-left: 15px;
   padding: 5px 0;
   transition: color 0.3s ease;
   text-decoration: none;
 }
 
+.button{
+  color: #f3f1f1 !important;
+}
+
 .navLink:hover {
   color: #ffffff !important;
 }
-
 
 .navLink::before {
   content: "";

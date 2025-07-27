@@ -1,11 +1,9 @@
-// src/components/Navbar/Navbar.jsx
-
 import { Navbar, Nav, Container } from "react-bootstrap";
 import styles from "./Navbar.module.css";
 
 const LevedNavbar = () => {
   return (
-    <Navbar expand="lg" className={styles.navbarWrapper} fixed="top">
+    <Navbar expand="lg" className={styles.navbarWrapper} fixed="top" variant="dark">
       <Container>
         <Navbar.Brand href="#home" className={styles.logo}>
           Leved Origin
