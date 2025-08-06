@@ -1,0 +1,105 @@
+.footer {
+  min-height: 40vh;
+  background-color: #0a0a1a;
+  color: #a0a0b0;
+}
+
+.navLink {
+  cursor: pointer;
+
+  color: #a0a0b0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #00aaff;
+}
+
+.widgetWrapper {
+  padding-top: 150px; /* Espaço para o CTA flutuar acima */
+  padding-bottom: 70px;
+  background-color: #0f172a;
+}
+
+.widget {
+  margin-bottom: 30px;
+}
+
+.widgetTitle {
+  color: #f0f0f0;
+  font-weight: 700;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.widgetTitle::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #00aaff;
+  margin-top: 10px;
+}
+
+.widget p {
+  margin-bottom: 20px;
+}
+
+.widget ul {
+  list-style: none;
+  padding: 0;
+}
+
+.widget ul li {
+  margin-bottom: 10px;
+}
+
+.widget ul li a {
+  color: #a0a0b0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.widget ul li a:hover {
+  color: #00aaff;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+}
+
+.social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(0, 170, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.social a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.contactInfo p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.copyrightArea {
+  padding: 20px 0;
+  background-color: #0a0a1a;
+}
+
+.copyrightArea p {
+  margin: 0;
+  color: #a0a0b0;
+  font-size: 0.9rem;
+}

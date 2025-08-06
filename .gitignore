@@ -15,6 +15,10 @@ dist-ssr
 #Pasta de imagens
 src/assets/
 
+#Componentes que precisam de melhoria
+CallToAction.jsx
+CallToAction.module.css
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
