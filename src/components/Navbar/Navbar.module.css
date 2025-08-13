@@ -1,10 +1,10 @@
 .navbarWrapper {
-  background-color: transparent !important;
+  background-color: transparent;
   transition: background-color 0.3s ease-in-out;
 }
 
 .navbarScrolled {
-  background-color: rgba(10, 10, 26, 0.85) !important;
+  background-color: rgba(11, 11, 31, 0.85) !important;
   backdrop-filter: blur(10px);
 }
 
@@ -15,17 +15,17 @@
 }
 
 .navLink {
-  position: relative; 
-  font-size: 18px;
+  position: relative;
+  font-size: 16px;
   font-weight: 500;
   color: #f7f6f6 !important;
-  margin-left: 15px;
+  margin: 0 25px;
   padding: 5px 0;
-  transition: color 0.3s ease;
+  transition: color 0.1s ease;
   text-decoration: none;
 }
 
-.button{
+.button {
   color: #f3f1f1 !important;
 }
 
@@ -36,14 +36,51 @@
 .navLink::before {
   content: "";
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
-  background: #00aaff; 
+  background: #00aaff;
   transition: width 0.3s ease-in-out;
 }
 
 .navLink:hover::before {
   width: 100%;
+}
+
+
+.offcanvasMenu {
+  width: 60vw !important;
+  max-width: 320px;
+
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.offcanvasTitle {
+  color: #ffffff !important;
+}
+.offcanvasMenu :global(.btn-close) {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+@media (max-width: 991.98px) {
+  .navLinks {
+    padding-top: 15px;
+  }
+  .navLink {
+    margin: 0;
+    padding: 12px 0;
+    text-align: center;
+    width: 100%;
+  }
+  .navLink::before {
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navLink:hover::before {
+    width: 50px;
+  }
 }
