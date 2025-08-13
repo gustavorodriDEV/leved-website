@@ -1,10 +1,10 @@
 .navbarWrapper {
   background-color: transparent;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.7s ease-in-out;
 }
 
 .navbarScrolled {
-  background-color: rgba(11, 11, 31, 0.85) !important;
+  background-color: rgba(27, 29, 31, 0.333) !important;
   backdrop-filter: blur(10px);
 }
 

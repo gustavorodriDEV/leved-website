@@ -1,13 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
 import { Link } from "react-scroll";
 import styles from "./Navbar.module.css";
 
 const LevedNavbar = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleClose = () => setShowOffcanvas(false);
   const handleShow = () => setShowOffcanvas(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 250) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navLinks = [
     { to: "home", text: "Home" },
@@ -21,7 +38,9 @@ const LevedNavbar = () => {
     <>
       <Navbar
         expand="lg"
-        className={styles.navbarWrapper}
+        className={`${styles.navbarWrapper} ${
+          isScrolled ? styles.navbarScrolled : ""
+        }`}
         fixed="top"
         variant="dark"
       >
