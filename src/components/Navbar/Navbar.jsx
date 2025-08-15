@@ -5,18 +5,15 @@ import styles from "./Navbar.module.css";
 
 const LevedNavbar = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleClose = () => setShowOffcanvas(false);
   const handleShow = () => setShowOffcanvas(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 250) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      const transitionEndPoint = 400;
+      const opacity = Math.min(window.scrollY / transitionEndPoint, 0.555);
+      document.documentElement.style.setProperty("--nav-opacity", opacity);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -39,7 +36,7 @@ const LevedNavbar = () => {
       <Navbar
         expand="lg"
         className={`${styles.navbarWrapper} ${
-          isScrolled ? styles.navbarScrolled : ""
+          showOffcanvas ? styles.navbarScrolled : ""
         }`}
         fixed="top"
         variant="dark"
